@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-menu {
+  padding: 2em;
+  position: relative;
+}
+
+.App-menu-logo {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  bottom: 0.5em;
+  left: 1em;
+  cursor: pointer;
+}
+
+.App-header {
+  background-color: #222;
+  height: 60px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.App-title span{
+  color: red;
+}
+
+.col-right {
+  flex: 1;
+  transform: translate(0,0);
+  transition: transform .3s;
+}
+
+.col-right.open h1{
+  visibility: hidden;
+}
+
+.col-left {
+  width: 270px;
+  height: 100vh;
+  background-color: #2F3030;
+  color: #FFF;
+}
+
+.col-left.close {
+  position: absolute;
+}
+
+.list-places-top {
+  width: 100%;
+  background-color: #484B4D;
+  line-height: 2em;
+  padding-top: 1.4em;
+}
+
+.list-places-top label {
+  font-size: 1.2em;
+  padding: 20px 10px 10px 10px;
+}
+
+.list-places-top input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 10px;
+}
+
+.list-places-top input:focus {
+  outline: 1px solid red;
+}
+
+.list-places-top input::placeholder {
+  font-size: 1.1em;
+  color: #B2C7CF;
+}
+
+.list-places {
+  font-size: 0.9em;
+  line-height: 3em;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.place-item:hover {
+  font-size: 1.2em;
+  color: red;
+  cursor: pointer;
+}
+
+.info-fapi {
+  font-size: 0.8em;
+  color: red;
+  line-height: 1.4em;
+  margin-top: 5em;
+}
+
+.info-window-content {
+  max-width: 220px;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 590px) {
+  .col-left {
+    width: 300px;
+  }
+
+  .col-right.open h1 {
+    visibility: visible;
+  }
+
+  .place-item:hover {
+    font-size: 1.4em;
+  }
+
+  .info-window-content {
+    max-width: 280px;
+  }
+}
