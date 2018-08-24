@@ -15,6 +15,7 @@ class ListLocations extends Component {
                 <div
                   className="place-item"
                   onClick={() => onItemClick(index, {lat: loc.venue.location.lat, lng: loc.venue.location.lng})}
+                  tabIndex={0}
                   role="button"
                   >
                     <p className="place-name">

@@ -10,6 +10,7 @@ const HeaderApp = (props) => {
         className="App-menu"
         onClick={props.onToggleClassMenu}
         role="navigation"
+        tabIndex={0}
         aria-label="toggle class menu" >
         <img src={logo} className="App-menu-logo" alt="logo of hamburger menu"></img>
       </a>

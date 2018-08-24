@@ -11,14 +11,8 @@ const par ={
 
 export const getLocations = () =>
   fetch(`${apiUrl}explore?client_id=${par.cl_id}&client_secret=${par.cl_secret}&v=${par.v}&limit=${par.limit}&ll=${par.ll}&query=${par.query}`)
-  .then(res => {
-  //  console.log(res)
-    return res.json();
-  })
+  .then(res => res.json())
 
 export const getLocationDetails = (id) =>
   fetch(`${apiUrl}${id}?&client_id=${par.cl_id}&client_secret=${par.cl_secret}&v=${par.v}`)
-  .then(res => {
-  //  console.log(res)
-    return res.json();
-  })
+  .then(res => res.json())

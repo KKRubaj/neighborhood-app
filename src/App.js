@@ -28,7 +28,8 @@ class App extends Component {
       .then(res => {
         let locations = res.response.groups[0].items;
         this.setState( {locations} )
-      });
+      })
+      .catch(error => alert("Oh no, I can not download any theater. Data is not available"))
   }
 
   // updating the query state with user text entered

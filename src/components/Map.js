@@ -22,7 +22,7 @@ const Map = withScriptjs(withGoogleMap(props =>{
               lat: loc.venue.location.lat,
               lng: loc.venue.location.lng
             }}
-            onClick= {() => onMarkerClick(idx, {lat: loc.venue.location.lat, lng: loc.venue.location.lng })}
+            onClick= {() => onMarkerClick(idx, this.position)}
             animation={animationMarker}
           >
           {idx === selectedIdx && (

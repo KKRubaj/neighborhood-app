@@ -36,7 +36,7 @@ class InfoWindowText extends Component {
     const { load, err, selectedLocation } = this.state;
 
     return(
-      <div className="info-window-content" aria-label="Info window content">
+      <div className="info-window-content" tabIndex={0} aria-label="Info window content">
       {load && selectedLocation && (
         <div>
           <h2>{ selectedLocation.name }</h2>
